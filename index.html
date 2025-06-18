@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clement Ho – Full Stack Web Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/adb2a0610b.js" crossorigin="anonymous"></script>
+    <style>
+        .banner {
+            background-image: url('/assets/img/banner.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            backdrop-filter: blur(2px);
+            /* filter: grayscale(100%); */
+        }
+    </style>
+
+</head>
+
+<body class="bg-white text-gray-900">
+    <header class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-blue-600">Clement Ho</a>
+
+            <button id="menu-toggle" class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav class="hidden md:flex space-x-6 text-gray-700 text-sm font-medium">
+                <a href="#hero" class="hover:text-blue-600">Home</a>
+                <a href="#certifications" class="hover:text-blue-600">Certifications</a>
+                <a href="#experience" class="hover:text-blue-600">Experience</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Full-Screen Mobile Menu -->
+        <div id="mobile-menu"
+            class="fixed inset-0 bg-black bg-opacity-90 text-white flex flex-col justify-center items-center space-y-6 text-2xl font-medium hidden z-40">
+            <button id="menu-close" class="absolute top-6 right-6 text-white text-3xl focus:outline-none">
+                <i class="fas fa-times"></i>
+            </button>
+            <a href="#hero" class="hover:text-blue-400 close-menu">Home</a>
+            <a href="#certifications" class="hover:text-blue-400 close-menu">Certifications</a>
+            <a href="#experience" class="hover:text-blue-400 close-menu">Experience</a>
+            <a href="#projects" class="hover:text-blue-400 close-menu">Projects</a>
+            <a href="#contact" class="hover:text-blue-400 close-menu">Contact</a>
+        </div>
+    </header>
+
+    <section class="bg-white text-gray-800 pt-24 py-12 banner" id="hero">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+
+        <div class="relative z-10 container mx-auto text-center text-white px-4">
+            <img src="/assets/img/profile.jpg" alt="Clement Ho"
+                class="w-32 h-32 mx-auto rounded-full shadow-lg mb-4 border-4 border-white" />
+            <h2 class="text-3xl font-bold">Clement Ho</h2>
+            <p class="text-lg mt-2 max-w-xl mx-auto">
+                Full Stack Web Developer specializing in scalable cloud systems, real-time applications, and modern
+                frontend architecture.
+            </p>
+            <a href="/assets/doc/resume.pdf"
+                class="mt-6 inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded shadow-md">
+                Download Resume
+            </a>
+        </div>
+    </section>
+
+    <section id="certifications" class="bg-gray-50 py-12">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-8 text-center">Certifications</h3>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center lg:col-start-2">
+                    <div class="text-blue-600 text-4xl mb-3 p-6 flex justify-center">
+                        <img src="/assets/img/aws-certified-solutions-architect-associate.png"
+                            alt="AWS Certified Solutions Architect – Associate">
+                    </div>
+                    <h4 class="text-lg font-semibold mb-1">AWS Certified Solutions Architect – Associate</h4>
+                    <p class="text-sm text-gray-600">Amazon Web Services</p>
+                    <p class="text-xs text-gray-500 mb-4">Issued Feb 2025</p>
+                    <a href="https://www.credly.com/badges/715a486c-4c54-485d-85c2-305c7bc15aff/public_url"
+                        target="_blank"
+                        class="inline-block text-sm text-white bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">
+                        View on Credly
+                    </a>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg p-6 text-center">
+                    <div class="text-green-600 text-4xl mb-3 p-6 flex justify-center">
+                        <img src="/assets/img/associate-cloud-engineer-certification.png"
+                            alt="Google Cloud Associate Cloud Engineer">
+                    </div>
+                    <h4 class="text-lg font-semibold mb-1">Google Cloud Associate Cloud Engineer</h4>
+                    <p class="text-sm text-gray-600">Google Cloud</p>
+                    <p class="text-xs text-gray-500 mb-4">Issued May 2025</p>
+                    <a href="https://www.credly.com/badges/a34524a5-11c5-4724-849c-2bf9cb97a258/public_url"
+                        target="_blank"
+                        class="inline-block text-sm text-white bg-green-600 px-4 py-2 rounded hover:bg-green-700">
+                        View on Credly
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="bg-blue-50 py-12">
+        <div class="container mx-auto px-4">
+            <h3 class="text-2xl font-bold mb-10 text-center">Experience</h3>
+            <div class="relative border-l border-gray-300 ml-4">
+                <div class="mb-10 ml-6">
+                    <div class="absolute -left-2 w-4 h-4 bg-blue-600 rounded-full border-2 border-white top-1.5"></div>
+                    <h4 class="text-lg font-semibold text-gray-800">Software Engineer @ Ryobi-G</h4>
+                    <span class="text-sm text-gray-600">May 2023 – Present</span>
+                    <ul class="list-disc list-inside mt-2 text-sm text-gray-700">
+                        <li>Develop & maintain Python-based web application</li>
+                        <li>App supporting team for solutions owned by Singapore Government Agencies</li>
+                        <li>Setup & maintain SIT environment</li>
+                    </ul>
+                </div>
+                <div class="mb-10 ml-6">
+                    <div class="absolute -left-2 w-4 h-4 bg-gray-200 rounded-full border-2 border-white top-40 mt-1.5">
+                    </div>
+                    <h4 class="text-lg font-semibold text-gray-800">Software Engineer @ SAINS</h4>
+                    <span class="text-sm text-gray-600">Mar 2020 – May 2023</span>
+                    <ul class="list-disc list-inside mt-2 text-sm text-gray-700">
+                        <li>Developed & maintained PHP-based web application.</li>
+                        <li>Maintaining access control systems for Sarawak State Government Agencies.</li>
+                        <li>Collaborated with IoT teams for hardware integration.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="bg-white py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Projects</h2>
+
+            <div class="grid gap-8 md:grid-cols-2">
+
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-2">TEMS - Tunneling and Excavation Monitoring
+                        System</h3>
+                    <p class="text-gray-700 mb-4">
+                        TEMS is a web-based solution for instrumentation monitoring & alerting, excavation site activity
+                        tracking.
+                        TEMS also built with interactive graphing features to display trends in sensor readings,
+                        supporting effective analysis and timely decision-making
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Golang</span>
+                        <span class="bg-red-100 text-red-800 text-xs font-semibold px-3 py-1 rounded-full">AWS</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Vue
+                            JS</span>
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">PostgreSQL</span>
+                        <span class="bg-gray-100 text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">C++</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-2xl font-semibold text-green-600 mb-2">TIMS - Tunnel Integrity Monitoring System
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        TIMS is a Django-based web application designed to monitor the underground infrastructure using
+                        Distributed Fiber Optic Sensing (DFOS) technology.
+                        It centralizes tunnel structure data, automates file processing, and provides updates on tunnel
+                        conditions to support efficient infrastructure management and decision-making.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Azure</span>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">MySQL</span>
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Django</span>
+                        <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Vue
+                            JS</span>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-2xl font-semibold text-red-600 mb-2">RT-WEB - Realtime Web System
+                    </h3>
+                    <p class="text-gray-700 mb-4">
+                        RT-web is a modern, web-based solution designed to replace and enhance the functionality of the
+                        existing desktop application. The initiative aims to streamline user experience, improve system
+                        accessibility, and reduce long-term maintenance by shifting to a centralized web architecture.
+
+                        By migrating to RT-web, users can access the system from any browser-enabled device without the
+                        need for installation or manual updates. The platform supports real-time data access,
+                        centralized security, and seamless deployment of new features.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">GCP</span>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">MySQL</span>
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Django</span>
+                        <!-- <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full"></span> -->
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-2xl font-semibold text-purple-600 mb-2">USACS - Unified Security Access Control System</h3>
+                    <p class="text-gray-700 mb-4">
+                        USACS is a centralized platform for managing secure access and visitor entry to government buildings. It streamlines access control management for authorized personnel and visitor management for guests, ensuring a secure, efficient, and traceable process. The system supports pre-registration, identity verification, access scheduling, and real-time monitoring to uphold strict security protocols while improving operational efficiency.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span
+                            class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Private Cloud</span>
+                        <span
+                            class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">MySQL</span>
+                        <span
+                            class="bg-purple-100 text-purple-800 text-xs font-semibold px-3 py-1 rounded-full">Codeigniter 4</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-bold mb-4">Get In Touch</h3>
+            <p class="mb-6">Open to freelance, consulting, and full-time opportunities.</p>
+            <div class="flex justify-center space-x-6 text-2xl">
+                <a href="mailto:clement.ho@sgs.com" class="hover:text-blue-400" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/chml0204" class="hover:text-blue-400" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/clementho1996" class="hover:text-blue-400" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-gray-300 py-4 text-center text-sm">
+        &copy; 2025 Clement Ho
+    </footer>
+
+
+    <script src="/assets/js/index.js">
+    </script>
+</body>
+
+</html>
